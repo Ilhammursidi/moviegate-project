@@ -141,18 +141,18 @@ async function getMovies() {
     }
 
     const wrapper = document.createElement("section");
-    wrapper.classList.add("flex", "flex-col", "gap-10");
-    
+    wrapper.classList.add("grid","grid-rows-[auto_1fr]","gap-10","w-full");
+
     movies.forEach(movie => {
         const card = document.createElement("div");
-      card.classList.add("grid","grid-cols-1","sm:grid-cols-[160px_1fr]","border-1","border-white","p-2","rounded-md","sm:border-none","md:border-none","gap-4","items-start");
+      card.classList.add("grid","w-full","min-w-0","grid-rows-[auto_1fr]","sm:grid-cols-[auto_1fr]","border","sm:border-none","border-white","py-2","rounded-md","gap-4","items-start");
 
       const img = document.createElement("img");
       img.src = imgUrl + movie.poster_path;
-      img.classList.add("w-full", "h-64","sm:h-60", "object-cover", "rounded-md");
+      img.classList.add("w-full", "h-auto","sm:h-60", "object-cover", "rounded-md");
       
       const detail = document.createElement("div");
-      detail.classList.add("flex", "flex-col", "justify-between","h-60", "w-full");
+      detail.classList.add("flex","flex-col","justify-between","h-auto","sm:h-60");
       
       const title = document.createElement("h2");
       title.classList.add("text-white", "text-xl", "font-semibold");
