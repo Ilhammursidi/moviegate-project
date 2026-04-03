@@ -56,7 +56,7 @@ function showToast(message, type = "success") {
   if (type === "error") bg = "bg-red-500";
   if (type === "warning") bg = "bg-yellow-500";
 
-  toast.classList.add((bg) + "text-white", "px-4", "py-2", "rounded-full", "h-10", "border", "font-semibold", "shadow-lg");
+  toast.classList.add(bg,"text-white", "px-4", "py-2", "rounded-full", "h-10", "border", "font-semibold", "shadow-lg");
   toast.textContent = message;
 
   container.appendChild(toast);
